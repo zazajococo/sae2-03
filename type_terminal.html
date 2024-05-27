@@ -45,6 +45,7 @@
 					<li href="sys">Système d'exploitation</li>
                     <li href="nav">Navigateur</li>
                     <li href="cookie">Cookies</li>
+					<li href="ecrans">Ecran</li>
 				</ul>
 			
 			</nav>
@@ -58,19 +59,23 @@
 				
 				<h2 id="machine">Machine utilisée</h2>
 				
-                <p id="client-info"></p>
+                <p id="appareil"></p>
 				
 				<h2 id="sys">Système d'exploitation</h2>
 		
-                <p></p>
+                <p id="os"></p>
 
                 <h2 id="nav">Navigateur</h2>
 		
-                <p></p>
+                <p id="navigateur"></p>
 
                 <h2 id="cookie">Cookie</h2>
 		
-                <p></p>
+                <p id="cookies"></p>
+
+				<h2 id="ecrans">Ecran</h2>
+		
+                <p id="ecran"></p>
 
 			</article>
 			
@@ -311,19 +316,14 @@
             'Navigateur : ' + jscd.browser +' '+ jscd.browserMajorVersion +
               ' (' + jscd.browserVersion + ')';
 
-        document.getElementById("mobile").innerText =
-            'Mobile : ' + jscd.mobile;
-
-        document.getElementById("flash").innerText =
-            'Flash : ' + jscd.flashVersion;
+        document.getElementById("appareil").innerText =
+            'Appareil : ' + (jscd.mobile ? 'Mobile' : 'PC');
 
         document.getElementById("cookies").innerText =
-            'Cookies : ' + jscd.cookies;
+            'Cookies : ' + (jscd.cookies ? 'Utilisés' : 'Pas utilisés');
 
         document.getElementById("ecran").innerText =
             'Taille de l\'écran : ' + jscd.screen;
 
-        document.getElementById("user-agent").innerText =
-            'User Agent Complet : ' + navigator.userAgent;
     </script>
 </html> 
