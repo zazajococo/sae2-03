@@ -1,7 +1,3 @@
-/**
- * JavaScript Client Detection
- * (C) viazenetti GmbH (Christian Ludwig)
- */
 (function (window) {
     {
         var unknown = '-';
@@ -9,8 +5,8 @@
         // screen
         var screenSize = '';
         if (screen.width) {
-            width = (screen.width) ? screen.width : '';
-            height = (screen.height) ? screen.height : '';
+            var width = (screen.width) ? screen.width : '';
+            var height = (screen.height) ? screen.height : '';
             screenSize += '' + width + " x " + height;
         }
 
@@ -100,7 +96,7 @@
         if ((ix = version.indexOf(' ')) != -1) version = version.substring(0, ix);
         if ((ix = version.indexOf(')')) != -1) version = version.substring(0, ix);
 
-        majorVersion = parseInt('' + version, 10);
+        var majorVersion = parseInt('' + version, 10);
         if (isNaN(majorVersion)) {
             version = '' + parseFloat(nVer);
             majorVersion = parseInt(nVer, 10);
@@ -175,19 +171,6 @@
                 osVersion = osVersion[1] + '.' + osVersion[2] + '.' + (osVersion[3] | 0);
                 break;
         }
-        
-        // flash (you'll need to include swfobject)
-        /* script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" */
-        var flashVersion = 'no check';
-        if (typeof swfobject != 'undefined') {
-            var fv = swfobject.getFlashPlayerVersion();
-            if (fv.major > 0) {
-                flashVersion = fv.major + '.' + fv.minor + ' r' + fv.release;
-            }
-            else  {
-                flashVersion = unknown;
-            }
-        }
     }
 
     window.jscd = {
@@ -199,17 +182,21 @@
         os: os,
         osVersion: osVersion,
         cookies: cookieEnabled,
-        flashVersion: flashVersion
     };
 }(this));
 
-alert(
-    'OS: ' + jscd.os +' '+ jscd.osVersion + '\n' +
-    'Browser: ' + jscd.browser +' '+ jscd.browserMajorVersion +
-      ' (' + jscd.browserVersion + ')\n' + 
-    'Mobile: ' + jscd.mobile + '\n' +
-    'Flash: ' + jscd.flashVersion + '\n' +
-    'Cookies: ' + jscd.cookies + '\n' +
-    'Screen Size: ' + jscd.screen + '\n\n' +
-    'Full User Agent: ' + navigator.userAgent
-);
+document.getElementById("os").innerText =
+    'OS : ' + jscd.os +' '+ jscd.osVersion;
+
+document.getElementById("navigateur").innerText =
+    'Navigateur : ' + jscd.browser +' '+ jscd.browserMajorVersion +
+      ' (' + jscd.browserVersion + ')';
+
+document.getElementById("appareil").innerText =
+    'Appareil : ' + (jscd.mobile ? 'Mobile' : 'PC');
+
+document.getElementById("cookies").innerText =
+    'Cookies : ' + (jscd.cookies ? 'Activés' : 'Désactivés');
+
+document.getElementById("ecran").innerText =
+    'Taille de l\'écran : ' + jscd.screen;
