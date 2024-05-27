@@ -42,13 +42,13 @@
 				
 				<ul>
 					<li>
-						<a href="#jour">Jour</a>
+						<a href="#JOUR">Jour</a>
 					</li>
 					<li>
-						<a href="#mois">Mois</a>
+						<a href="#MOIS">Mois</a>
 					</li>
 					<li>
-						<a href="#annee">Année</a>
+						<a href="#ANNEE">Année</a>
 					</li>
 				</ul>
 			
@@ -60,17 +60,17 @@
 			
 			<article>
 				
-				<h2 id="jour">Jour</h2>
+				<h2 id="JOUR">Jour</h2>
 		
-                <p></p>
+                <p id="jour"></p>
 
-                <h2 id="mois">Mois</h2>
+                <h2 id="MOIS">Mois</h2>
 		
-                <p></p>
+                <p id="mois"></p>
 
-                <h2 id="annee">Année</h2>
+                <h2 id="ANNEE">Année</h2>
 		
-                <p></p>
+                <p id="annee"></p>
 		
 			</article>
 			
@@ -100,4 +100,20 @@
 		</footer>
 
 	</body>
+	<script>
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var moisEnLettres = [
+            "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet",
+            "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+        ];
+        var moisNumero = parseInt(mm, 10) - 1; // Les mois commencent à 0 dans l'objet Date
+        var moisLettre = moisEnLettres[moisNumero];
+        var yyyy = today.getFullYear();
+
+        document.getElementById("jour").innerText = 'Jour : ' + dd;
+        document.getElementById("mois").innerText = 'Mois : ' + mm + ' / ' + moisLettre;
+        document.getElementById("annee").innerText = 'Année : ' + yyyy;
+    </script>
 </html> 
