@@ -11,12 +11,7 @@
 		<meta name="author" content="CORALIE Elsa">
 		
 		<!--Mise en place d'une description pour donner un aperçu du site web sur les moteurs de recherche-->
-		<meta name="description" content="Ce site web a pour objectif de lier 
-        plusieurs page web ensemble grâce à des liens, 
-        ne pas être statique, contenir des iformations 
-        dynamiques et avoir un minimum de style CSS. 
-        Les pages d'erreurs du site web doivent être 
-        personalisées.">
+		<meta name="description" content="Ce site web a pour objectif de lier plusieurs page web ensemble grâce à des liens, ne pas être statique, contenir des iformations dynamiques et avoir un minimum de style CSS. Les pages d'erreurs du site web doivent être personalisées.">
 
 		<!--Mise en place de mots clés pour un meilleur référencement du site web sur les moteurs de recherche-->
 		<meta name="keywords" content="date, jour, position géographique, type de terminal" lang="fr">
@@ -24,9 +19,7 @@
 	</head>
 
 	<body>
-		
         <header>
-
 			<h1 id="top">- Informations pour l'utilisateur -</h1>
 
 			<hr>
@@ -39,17 +32,13 @@
 			<h2>Sommaire</h2>
 			
 			<nav>
-				
 				<ul>
-					<li href="machine">Machine utilisée</li>
-					<li href="sys">Système d'exploitation</li>
-                    <li href="nav">Navigateur</li>
-                    <li href="cookie">Cookies</li>
-					<li href="ecrans">Ecran</li>
+					<li><a href="#machine">Machine utilisée</a></li>
+					<li><a href="#sys">Système d'exploitation</a></li>
+                    <li><a href="#nav">Navigateur</a></li>
+                    <li><a href="#cookie">Cookies</a></li>
 				</ul>
-			
 			</nav>
-		
 		</header>
 			  
 		<main>
@@ -59,23 +48,19 @@
 				
 				<h2 id="machine">Machine utilisée</h2>
 				
-                <p id="appareil"></p>
+                <p id="client-info"></p>
 				
 				<h2 id="sys">Système d'exploitation</h2>
 		
-                <p id="os"></p>
+                <p></p>
 
                 <h2 id="nav">Navigateur</h2>
 		
-                <p id="navigateur"></p>
+                <p></p>
 
                 <h2 id="cookie">Cookie</h2>
 		
-                <p id="cookies"></p>
-
-				<h2 id="ecrans">Ecran</h2>
-		
-                <p id="ecran"></p>
+                <p></p>
 
 			</article>
 			
@@ -87,9 +72,11 @@
 			
 			<nav>
 				
-				<p><a href="index.html">La page d'accueil</a> -
+				<p style="text-align: center;">
+                    <a href="index.html">La page d'accueil</a> -
                     <a href="date.html">La date du jour</a> - 
-					<a href="position_geographique.html">La position géographique de l'utilisateur</a></p>
+					<a href="position_geographique.html">La position géographique de l'utilisateur</a>
+                </p>
 			
 			</nav>
 			
@@ -281,19 +268,6 @@
                         osVersion = osVersion[1] + '.' + osVersion[2] + '.' + (osVersion[3] | 0);
                         break;
                 }
-                
-                // flash (you'll need to include swfobject)
-                /* script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" */
-                var flashVersion = 'no check';
-                if (typeof swfobject != 'undefined') {
-                    var fv = swfobject.getFlashPlayerVersion();
-                    if (fv.major > 0) {
-                        flashVersion = fv.major + '.' + fv.minor + ' r' + fv.release;
-                    }
-                    else  {
-                        flashVersion = unknown;
-                    }
-                }
             }
 
             window.jscd = {
@@ -305,7 +279,6 @@
                 os: os,
                 osVersion: osVersion,
                 cookies: cookieEnabled,
-                flashVersion: flashVersion
             };
         }(this));
 
@@ -316,14 +289,19 @@
             'Navigateur : ' + jscd.browser +' '+ jscd.browserMajorVersion +
               ' (' + jscd.browserVersion + ')';
 
-        document.getElementById("appareil").innerText =
-            'Appareil : ' + (jscd.mobile ? 'Mobile' : 'PC');
+        document.getElementById("mobile").innerText =
+            'Mobile : ' + jscd.mobile;
+
+        document.getElementById("flash").innerText =
+            'Flash : ' + jscd.flashVersion;
 
         document.getElementById("cookies").innerText =
-            'Cookies : ' + (jscd.cookies ? 'Utilisés' : 'Pas utilisés');
+            'Cookies : ' + jscd.cookies;
 
         document.getElementById("ecran").innerText =
             'Taille de l\'écran : ' + jscd.screen;
 
+        document.getElementById("user-agent").innerText =
+            'User Agent Complet : ' + navigator.userAgent;
     </script>
 </html> 
