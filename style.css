@@ -6,7 +6,7 @@ body {
     /* police Trebuchet MS, arial ou sans-serif */
     font-family: 'Trebuchet MS', Arial, sans-serif;
     /* couleur du texte : d2691e */
-    color: #191E0A;
+    color: #191e0a;
     /* image de fond : couleur ea9e69, bouteille, sans répétition, fixe, en bas à droite */
     background: #FAFCF5 url(images/bouteille.png) no-repeat fixed bottom right;
 }
@@ -20,7 +20,7 @@ header, main, footer {
     /* marge interne : 10 pixels */
     padding: 10px;
     /* bordure : 4 pixels, inset et de couleur d2691e */
-    border: 4px inset #640d6a;
+    border: 4px inset #99dd94;
     /* fond de couleur fff */
     background-color: #fff;
 }
