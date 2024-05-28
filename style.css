@@ -8,7 +8,7 @@ body {
     /* couleur du texte : d2691e */
     color: #3215d6c1;
     /* image de fond : couleur ea9e69, bouteille, sans répétition, fixe, en bas à droite */
-    background: #93FF91 url(images/bouteille.png) no-repeat fixed bottom right;
+    background: #F6FBFC url(images/bouteille.png) no-repeat fixed bottom right;
 }
 
 /* Définition en-tête, main et pied de page*/
@@ -38,7 +38,7 @@ h1 {
     /* espacement des mots : 20 pixels */
     word-spacing: 20px;
      /* couleur de fond : a52a2a */
-     background-color: #d21ea25e;
+     background-color: #F6FBFC;
 }
 
 /* Définition titre de niveau 2 */
@@ -56,7 +56,7 @@ h2 {
     /* interligne de 1,8 em */
     line-height: 1.8em;
     /* couleur de fond : a52a2a */
-    background-color: #3215d652;
+    background-color: #C1FFC0;
     /* marge externe : 20 pixels en haut et en bas, 10% à gauche et à droite */
     margin: 20px 10%;
 }
@@ -80,7 +80,7 @@ h3 {
     /* épaisseur de la bordure de 3 pixels */
     border-width: 3px;
     /* couleur de la bordure a52a2a */
-    border-color: #302aa5;
+    border-color: #4FA1C1;
     /* style de la bordure : double */
     border-style: double;
     /* images de fond : mini_bouteille, sans répétition, à gauche */
@@ -116,7 +116,7 @@ blockquote {
     /* police de couleur blanche */
     color: white;
     /* fond de couleur d2691e */
-    background-color: #1e66d2;
+    background-color: #F6FBFC;
     /* texte centré */
     text-align: center;
     /* marges droite et gauche : 180 pixels et haute et basse : 2 pixels */
