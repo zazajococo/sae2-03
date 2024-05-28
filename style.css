@@ -8,7 +8,7 @@ body {
     /* couleur du texte : d2691e */
     color: #3215d6c1;
     /* image de fond : couleur ea9e69, bouteille, sans répétition, fixe, en bas à droite */
-    background: #e8137a url(images/bouteille.png) no-repeat fixed bottom right;
+    background: #93FF91 url(images/bouteille.png) no-repeat fixed bottom right;
 }
 
 /* Définition en-tête, main et pied de page*/
@@ -48,7 +48,7 @@ h2 {
     /* police grasse */
     font-weight: bold;
     /* police de couleur : d2691e */
-    color: #d21ea2;
+    color: #93FF91;
     /* alignement centré */
     text-align: center;
     /* espacement des lettres de 5 pixels */
