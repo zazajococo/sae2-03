@@ -1,129 +1,79 @@
-/* Styles CSS - Vins de Loire */
 
-
-/* Définition du corps de la page */
 body {
-    /* police Trebuchet MS, arial ou sans-serif */
     font-family: 'Trebuchet MS', Arial, sans-serif;
-    /* couleur du texte : d2691e */
     color: #191e0a;
-    /* image de fond : couleur ea9e69, bouteille, sans répétition, fixe, en bas à droite */
     background: #FAFCF5 url(images/bouteille.png) no-repeat fixed bottom right;
 }
 
-/* Définition en-tête, main et pied de page*/
 header, main, footer {
-    /* largeur de 1024 pixels */
     width: 1024px;
-    /* marge externe : 20 pixels en haut et en bas, auto à gauche et à droite */
     margin: 20px auto;
-    /* marge interne : 10 pixels */
     padding: 10px;
-    /* bordure : 4 pixels, inset et de couleur d2691e */
     border: 4px inset #99dd94;
-    /* fond de couleur fff */
     background-color: #fff;
 }
 
 
 
-/* Définition titre de niveau 1 */
 h1 {
-    /* police Bauhaus 93, futura ou sans-serif, taille de la police de 2.5em, interligne de 2.1em et lettres en petites capitales */
     font: small-caps 2.5em/2.1em "Bauhaus 93", 'futura', sans-serif;
-    /* premières lettres de chaque mot en majuscules */
     text-transform: capitalize;
-    /* texte centré */
     text-align: center;
-    /* espacement des mots : 20 pixels */
     word-spacing: 20px;
-     /* couleur de fond : a52a2a */
-     background-color: #a1c64c;
+    background-color: #a1c64c;
 }
 
-/* Définition titre de niveau 2 */
 h2 {
-    /* style oblique */
     font-style: oblique;
-    /* police grasse */
     font-weight: bold;
-    /* police de couleur : d2691e */
-    color: #93FF91;
-    /* alignement centré */
+    color: #191e0A;
     text-align: center;
-    /* espacement des lettres de 5 pixels */
     letter-spacing: 5px;
-    /* interligne de 1,8 em */
     line-height: 1.8em;
-    /* couleur de fond : a52a2a */
     background-color: #99dd94;
-    /* marge externe : 20 pixels en haut et en bas, 10% à gauche et à droite */
     margin: 20px 10%;
 }
 
-/* Définition titres de niveau 3 et 4 et les termes définis au niveau du glossaire */
-h3, h4 {
-    /* police de couleur a52a2a */
+h4 {
     color: #65CE6F;
 }
 
-
-
-/* Définition titre de niveau 3 */
 h3 {
-    /* style italique */
+	color: #191e0A;
+}
+
+
+h3 {
     font-style: italic;
-    /* police grasse */
     font-weight: bold;
-    /* alignement centré */
     text-align: center;
-    /* épaisseur de la bordure de 3 pixels */
     border-width: 3px;
-    /* couleur de la bordure a52a2a */
     border-color: #65ce6f;
-    /* style de la bordure : double */
     border-style: double;
-    /* largeur de 600 pixels */
     width: 600px;
-    /* hauteur de 40 pixels */
     height: 40px;
-    /* marge externe de 20 pixels en haut et en bas, et automatique ailleurs */
     margin: 20px auto;
-    /* marge interne égale à 12px en haut et 0 ailleurs */
     padding: 12px 0 0;
 }
 	
 
-/* Définition titre de niveau 4 et les termes définis au niveau du glossaire */
 h4, dl {
-    /* décalage du texte de 20 pixels */
     text-indent: 20px;
-    /* bordure gauche style solid, épaisseur de 4 pixels */
     border-left: 4px solid;
-    /* bordure basse style solid, épaisseur de 2 pixels */
     border-bottom: 2px solid;
-    /* marge externe de 20 pixels en haut et de 70% à droite */
     margin-top: 20px;
     margin-right: 70%;
 }
 
 
 
-/* Définition du bloc de citation */
 blockquote {
-    /* police de couleur blanche */
     color: #191E0A;
-    /* fond de couleur d2691e */
-    background-color: #FAFCF5;
-    /* texte centré */
+    background-color: #65ce6f;
     text-align: center;
-    /* marges droite et gauche : 180 pixels et haute et basse : 2 pixels */
     margin: 2px 180px;
-    /* marge interne droite et gauche de 40 pixels, haute et basse de 2 pixel */
     padding: 20px 40px;
-    /* bordure gauche : 6 pixels, double et de couleur blanche */
     border-left: 6px double white;
-    /* bordure droite : 6 pixels, double et de couleur blanche */
     border-right: 6px double white;
 }
 
@@ -135,19 +85,14 @@ blockquote {
 
 
 
-/* Définition sous liste non ordonnée */
 ul ul {
-    /* liste à puce avec aspect carré, sans image et à l'intérieur */
     list-style: square none;
-    /* lettres sans petites capitales */
     font-variant: small-caps;
 }
 
 
 
-/* Définition liens normaux ou visités */
 a:link, a:visited {
-    /* lien de couleur a52a2a */
     color: #191E0A;
 }
 
@@ -156,21 +101,15 @@ article > p > a:link {
     text-decoration: none;
 }
 
-/* Définition liens présents comme élément d'une liste */
 ul a:any-link {
-    /* taille de la police de 1,2 em */
     font-size: 1.2em;
-    /* interligne de 1,5 em */
     line-height: 1.5em;
 }
 
 
 
-/* Définition paragraphe "appellation" */
 h3 + p {
-    /* texte centré */
     text-align: center;
-    /* taille de la police 0,9 em */
     font-size: 0.9em;
 }
 
