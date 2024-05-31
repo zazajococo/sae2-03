@@ -38,7 +38,7 @@ h1 {
     /* espacement des mots : 20 pixels */
     word-spacing: 20px;
      /* couleur de fond : a52a2a */
-     background-color: #FAFCF5;
+     background-color: #a1c64c;
 }
 
 /* Définition titre de niveau 2 */
@@ -56,7 +56,7 @@ h2 {
     /* interligne de 1,8 em */
     line-height: 1.8em;
     /* couleur de fond : a52a2a */
-    background-color: #FAFCF5;
+    background-color: #99dd94;
     /* marge externe : 20 pixels en haut et en bas, 10% à gauche et à droite */
     margin: 20px 10%;
 }
@@ -80,11 +80,9 @@ h3 {
     /* épaisseur de la bordure de 3 pixels */
     border-width: 3px;
     /* couleur de la bordure a52a2a */
-    border-color: #4FA1C1;
+    border-color: #65ce6f;
     /* style de la bordure : double */
     border-style: double;
-    /* images de fond : mini_bouteille, sans répétition, à gauche */
-    background: url(images/mini_bouteille.png) no-repeat left;
     /* largeur de 600 pixels */
     width: 600px;
     /* hauteur de 40 pixels */
